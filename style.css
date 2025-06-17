@@ -298,7 +298,7 @@ p{
     justify-content: flex-end;
     align-items: flex-end;
 
-    width: 35%;
+    width: 50%;
 }
 
 .aboutMeImg {
@@ -311,7 +311,8 @@ p{
 }
 
 .imgMeTest {
-    width: 400px;
+    width: auto;
+    height: 100%;
 }
 
 .slideshowImg {
