@@ -1,0 +1,556 @@
+html {
+
+    font-family: "Overpass Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    width: 100%;
+    background-color: #FFFFFF;
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d5cfcf67;
+    margin: 0.2%;
+    height: 100%;
+    width: 99.5%;
+    max-width: 99.5%;
+    background-color: #d5cfcf67;
+
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+
+}
+p{
+    line-height: 1.5;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.59;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+
+}
+
+.menu {
+    color: #000;
+    transition: .9s;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu:hover {
+    transition: all ease 1s;
+    box-shadow: inset 110px 0 0 0 #6be49f;
+
+
+}
+
+.menuStatic {
+    box-shadow: inset 110px 0 0 0 #6be49f;
+    color: #000;
+    transition: .9s;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menuStatic:hover {
+    transition: all ease 1s;
+    box-shadow: inset 110px 0 0 0 #0d4927a1;
+
+
+}
+
+/* This does not work, its supposed to show what menu tab is currently selected. But oh well, whatever */
+/* #menu1:first-child::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #6be49f;
+    margin-top: 1px;
+} */
+
+
+.hrStyle {
+    border: 1px solid #ababab;
+    width: 99%;
+
+}
+
+.bodyContain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+/* .aboutMeContainer {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+} */
+
+.aboutMe {
+    align-content: flex-end;
+    align-items: end;
+    border: 1px solid black;
+    height: 100%;
+    width: 45%;
+
+
+}
+
+#h1Modifier {
+    font-size: 1em;
+    color: #000;
+    background-color: #6be49f;
+
+}
+
+#h2Modifier {
+    font-size: 3em;
+    margin-bottom: 2%;
+}
+
+#highlightTxt {
+    color: #000;
+    background-color: #6be49f;
+    font-weight: bold;
+
+}
+#highlightTxtConstruction {
+    color: #fff;
+    background-color: red;
+    font-weight: bold;
+
+}
+
+#btnWord {
+    color: #000;
+
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+#btnWord:hover {
+    transition: all ease 1s;
+    box-shadow: inset 100px 0 0 0 #6be49f;
+}
+
+#btnWordH2 {
+    color: #000;
+    text-decoration: under;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+#btnWordH2:hover {
+    transition: all ease 1s;
+    box-shadow: inset 237px 0 0 0 #6be49f;
+}
+
+#btnWordJMP {
+    color: #000;
+    text-decoration: under;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+#btnWordJMP:hover {
+    transition: all ease 1s;
+    box-shadow: inset 345px 0 0 0 #6be49f;
+}
+.caseNav{
+   
+    text-decoration: underline; 
+    color: #000;
+}
+.caseNav:hover{
+    transition: all ease 1s;
+    box-shadow: inset 150px 0 0 0 #6be49f;
+}
+
+.pictureMe {
+    border: 1px solid rgb(255, 0, 0);
+    width: 45%;
+    margin-left: 2%;
+
+
+
+}
+
+.divider {
+
+
+    width: 35%;
+    margin-left: 2%;
+}
+
+.dividerTxt {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 2%;
+    width: 35%;
+    justify-content: center;
+}
+
+.imgMe {
+    width: 50%;
+    height: 100%;
+}
+
+.myProjectsContainer {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+
+
+    width: 100%;
+
+}
+
+.myProjects {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+
+}
+
+.loggoContainer {
+    display: flex;
+    /* margin-top: 5%; */
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    
+}
+
+.loggo {
+    width: 75%;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.loggo:hover {
+    width: 100%;
+    transition: all 300ms;
+}
+
+.a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutMeTest {
+    margin-top: 5%;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.aboutMeContent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    width: 35%;
+}
+
+.aboutMeImg {
+
+    display: flex;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+
+}
+
+.imgMeTest {
+    width: 400px;
+}
+
+.slideshowImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshowTest {
+    max-width: 75%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6be49f;
+    box-shadow: inset 0px 0px 110px -44px rgba(0, 0, 0, 0.49);
+    border-radius: 25px;
+}
+
+.slideshowTest.active {
+    opacity: 1;
+}
+
+button.prev,
+button.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.aboutMeTest:hover button.prev,
+.aboutMeTest:hover button.next {
+    opacity: 1;
+}
+
+button.prev {
+    position: absolute;
+    left: -50px;
+    /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button.next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Smooth page transition --> this is for legacy transition.js. If implemented again add <script> in html <body>*/
+/* .fade-out {
+    opacity: 0.5;
+    transition: opacity 0.4s ease-out;
+} */
+
+/* Ensure the slideshow container is positioned relative to contain the buttons */
+.slideshowImgCase {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the images in the slideshow */
+.slideshowTestCase {
+    max-width: 75%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6be49f;
+    border-radius: 25px;
+    transition: transform 0.3s ease-out;
+}
+
+/* Make the active image visible */
+.slideshowTestCase.active {
+    opacity: 1;
+}
+
+/* Style for the navigation buttons */
+button.prevCase,
+button.nextCase,
+button.enlargeCase {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 20;
+    /* Ensure buttons are above other content */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+}
+
+/* Show the buttons when hovering over the slideshow container */
+.slideshowImgCase:hover button.prevCase,
+.slideshowImgCase:hover button.nextCase,
+.slideshowImgCase:hover button.enlargeCase {
+    opacity: 1;
+}
+
+/* Position the buttons beside each other at the bottom center of the image */
+button.prevCase,
+button.nextCase {
+    bottom: 10px;
+    /* Adjust as needed */
+    transform: translateX(-50%);
+}
+
+/* Position the previous button to the left of the center */
+button.prevCase {
+    left: 25%;
+    /* Adjust as needed */
+}
+
+/* Position the next button to the right of the center */
+button.nextCase {
+    left: 75%;
+    /* Adjust as needed */
+}
+
+/* Position the enlarge button at the top right of the image */
+button.enlargeCase {
+    top: 10px;
+    /* Adjust as needed */
+    right: 25%;
+    /* Adjust as needed */
+}
+
+/* Change the background color of the buttons when hovered */
+button.prevCase:hover,
+button.nextCase:hover,
+button.enlargeCase:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style for the enlarged image */
+.slideshowTestCase.enlarged {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    /* Ensure the enlarged image is above other content */
+    transition: transform 0.3s ease-in;
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Adjust the scale as needed */
+}
+
+/* Style for the slide number text */
+.slideNumber {
+    position: absolute;
+    top: 10px;
+    /* Adjust as needed */
+    left: 25%;
+    /* Adjust as needed */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 20;
+    /* Ensure the slide number is above other content */
+    opacity: 0;
+    /* Initially hide the slide number */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the slide number when hovering over the slideshow container */
+.slideshowImgCase:hover .slideNumber {
+    opacity: 1;
+}
+
+#scroll-to-top-btn {
+    animation: pulse 1500ms infinite;
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    z-index: 99;
+    border-color: rgba(0, 0, 0, 0.212);
+    border-width: 2px;
+    border-style: solid;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 0.5%;
+    border-radius: 50px;
+    transition: all 200ms;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px rgba(3, 255, 158, 0.2);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px #03ff9e33;
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+#scroll-to-top-btn:hover {
+    background-color: #d9d9d9;
+    transition: all 200ms;
+    box-shadow: 5px 5px 10px -5px rgb(0, 0, 0, 0.4);
+}
+
+.topBTN {
+    width: 1em;
+    height: 1em;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Case Studys</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <script src="slideshow.js"></script>
+    <!-- Menu navigation -->
+    <div class="header">
+        <a class="menu" href="index.html">Home</a>
+        <a class="menuStatic" href="myProjects.html">Case studys</a>
+        <a class="menu" href="#">CV</a>
+        <a class="menu" href="#">About me</a>
+    </div>
+
+    <hr class="hrStyle">
+
+    <!-- container for content. Needed to have padding -->
+    <div class="bodyContain">
+
+        <div class="aboutMeTest">
+            <div class=" aboutMeContent" style="margin-left: 10%; position: relative;">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <div class="content" id="content1">
+                    <h1 style=" font-size: 3em;">PROJECT 1</h1>
+                    <h2 id="h2Modifier">REGION HALLAND BEMMANNINGSENHETEN</h2>
+                    <p>The briefs problems space encompassed <span id="highlightTxt"> REGION HALLAND
+                            BEMMANNINGSENHETEN</span>. Region Halland
+                        bemanningsenheten was in need of a more effective system for booking personnel who can drive and
+                        administer proper care inside of ambulances.
+                        This includes <span id="highlightTxt">DIVIDING WORK HOURS</span> more efficiently and equally,
+                        seeing <span id="highlightTxt">INDIVIDUAL COMPETENCES</span>; as well as having an
+                        efficient <span id="highlightTxt">OVERVIEW OF SHIFTS THAT ARE MISSING PORSONNEL</span> and what
+                        competencies are needed inside
+                        the ambulance.</p>
+                    <p>MY ROLE: <span id="highlightTxt">REACT NATIVE DEVELOPER</span></p>
+                    <p>PROJECT SPAN: <span id="highlightTxt">FIVE WEEKS</span></p>
+                    <p>READ CASE STUDY <a href="caseRegionH.html" id="btnWord">HERE</a>.</p>
+                </div>
+
+                <div class="content" id="content2" style="display: none;">
+                    <h1 style=" font-size: 3em; margin-bottom: 0%;">PROJECT 2</h1>
+                    <p style="margin-top: 0%;"><span id="highlightTxtConstruction"><i>UNDER CONSTRUCTION: MISSING PICTURES</i></span></p>
+                    <h2 id="h2Modifier">LBVA & VIVAB</h2>
+                    <p> <span id="highlightTxt">LBVA & VIVAB</span> wanted to make actors such as, private individuals
+                        and companies conscious ofs
+                        <span id="highlightTxt">FRESHWATER AS A FINITE RESOURCE</span> and as a prerequisite for all
+                        life to function normally. This
+                        involved making actors <span id="highlightTxt">STOP WASTING FRESHWATER</span>. Further LBVA &
+                        VIVAB was in the process of
+                        installing digital water gauges; all across Halmstad municipality. With this in mind a
+                        <span id="highlightTxt">SERVICE CENTERED SOLUTION</span> was developed. Namely a solution that
+                        would allow private actors to
+                        more
+                        <span id="highlightTxt">EASILY MONITOR CONSUMPTION OF FRESHWATER</span>.
+                    </p>
+                    <p>MY ROLE: <span id="highlightTxt">SERVICE DESIGN LEAD</span></p>
+                    <p>READ CASE STUDY <a href="caseLBVA&VIVAB.html" id="btnWord">HERE</a>.</p>
+                </div>
+
+                <div class="content" id="content3" style="display: none;">
+                    <h1 style=" font-size: 3em; margin-bottom: 0%;">PROJECT 3</h1>
+                    <p style="margin-top: 0%;"><span id="highlightTxtConstruction"><i>UNDER CONSTRUCTION: MISSING PICTURES AND TXT HIGHLIGHTS</i></span></p>
+                    <h2 id="h2Modifier">BALANCE GOLF</h2>
+                    <p>The project brief provided by Balance golf, co developed by Esbjörn Ebbesson, described the
+                        <span id="highlightTxt">PROBLEM AREA LIKE THE FOLLOWING:</span> <i>The website is <span
+                                id="highlightTxt">NOT STRUCTURED OR ADAPTED FOR THE TARGET GROUP</span>. It is
+                            neither designed in such a way that it explains or captures
+                            our golfing concept as a whole.</i> Initially the design team questioned this brief as the
+                        website
+                        as a
+                        whole seemed to be relatively well designed. By further examining the website with the project
+                        brief
+                        in mind the design team could
+                        uncover <span id="highlightTxt">ISSUES IN THE INFORMATIONAL ARCHITECTURE OF THE WEBSITE</span>.
+                        Therefore this
+                        became
+                        the focus of the project.
+                    </p>
+                    <p>MY ROLE: <span id="highlightTxt">EVALUATION RESPONSIBLE</span></p>
+                    <p>READ CASE STUDY <a href="caseBalanceG.html" id="btnWord">HERE</a>.</p>
+                </div>
+
+            </div>
+
+            <div class="slideshowImg">
+                <img class="slideshowTest active" src="assets\Region_Halland\reworked shadows.png" id="slide1">
+                <img class="slideshowTest" src="assets\lbva&vivab\lbva&vivab cover.png" id="slide2">
+                <img class="slideshowTest" src="assets\BG\BG cover.png" id="slide3">
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+        </div>
+        <hr class="hrStyle" style="margin-top: 5%;">
+
+        <!-- Projects ive been apart of -->
+        <div class="myProjectsContainer" style="margin-bottom: 3.8%;">
+
+            <div class="myProjects">
+
+                <h2 style="margin-bottom: 0%; font-size: 2.5em;">CASE STUDY'S:</h2>
+                <p style="margin-top: 0%;"><i>press any case to see more</i></p>
+
+            </div>
+
+            <!-- Logos of projects -->
+            <div class="divider">
+                <div class="loggoContainer">
+                    <a href="caseRegionH.html" class="a"><img class="loggo" src="assets\REgion_Halland_Logga.png"></a>
+                    <a href="caseLBVA&VIVAB.html" class="a"><img class="loggo" src="assets\LBVA&VIVABv.3.png"></a>
+                    <a href="caseBalanceG.html" class="a"><img class="loggo" src="assets\BG-Logga.png"></a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <hr class="hrStyle">
+
+
+    </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
