@@ -46,7 +46,7 @@ p{
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 0.5%;
