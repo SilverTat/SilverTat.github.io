@@ -556,3 +556,27 @@ button.enlargeCase:hover {
     width: 1em;
     height: 1em;
 }
+
+.slideshow-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    
+}
+.slideshow-dots .dot {
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: #a3a3a3 0.5px 0.5px 5px;
+}
+.slideshow-dots .dot.active {
+    background-color: #6be49f;
+    
+}

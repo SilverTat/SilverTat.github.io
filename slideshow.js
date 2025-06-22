@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
         contents.forEach((content, i) => {
             content.style.display = i === index ? "block" : "none";
         });
+        // Update dots
+        const dots = document.querySelectorAll('.slideshow-dots .dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
     }
 
     function nextSlide() {
@@ -27,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             showSlide(currentSlide);
         }, 500); // Match this delay with the CSS transition duration
+    }
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = index;
+        showSlide(currentSlide);
     }
 
     function startSlideShow() {
@@ -51,4 +62,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Expose functions to global scope for button onclick handlers
     window.nextSlide = nextSlide;
     window.prevSlide = prevSlide;
+    window.goToSlide = goToSlide;
 });
