@@ -1,82 +1,366 @@
 <!DOCTYPE html>
-<html>
+
+<html class="light" lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Home</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
-    </style>
-</head>
-
-<body>
-
-    <!-- Menu navigation -->
-    <div class="header">
-        <a id="index" class="menuStatic" href="index.html">Home</a>
-        <a id="cases" class="menu" href="myProjects.html">Case studys</a>
-        <a id="cv" class="menu" href="assets\Sebastian Persson - CV.pdf">CV</a>
-        <a id="about_me" class="menu" href="aboutMe.html">About me</a>
-    </div>
-
-    <hr class="hrStyle">
-
-    <!-- container for content. Needed to have padding -->
-    <div class="bodyContain">
-
-        <div class="aboutMeTest">
-            <div style="width: 35%;">
-
-                <h1 id="h1Modifier" style="margin-top: 50%;">Hello there, my name is </h1>
-                <h2 id="h2Modifier">SEBASTIAN PERSSON</h2>
-                <p>Hi, Im Sebastian, a qurious <span id="highlightTxt"> service & UX designer</span> with a MSc and BSc. I have a passion for
-                    learning and always ask the questions why and how! Keep scrolling to see the projects i've previously worked with; or why not just use this
-                    convenient <a id="btnWord" href="myProjects.html">BUTTON</a>?</p>
-            </div>
-
-            <div class="aboutMeImg">
-                <img class="imgMeTest" src="assets\PFP.jpg">
-            </div>
-
-        </div>
-
-        <hr class="hrStyle" style="margin-top: 5%;">
-
-        <!-- Projects ive been apart of -->
-        <div class="myProjectsContainer" style="margin-bottom: 3.8%;">
-
-            <div class="myProjects">
-
-                <h2 style="margin-bottom: 0%; font-size: 2.5em;">CASE STUDY'S:</h2>
-                <p style="margin-top: 0%;"><i>press any case to see more</i></p>
-
-            </div>
-
-            <div class="divider">
-                <!-- Logos of projects -->
-        <div class="loggoContainer">
-            <a href="caseRegionH.html" class="a"><img class="loggo" src="assets\REgion_Halland_Logga.png"></a>
-                    <a href="caseLBVA&VIVAB.html" class="a"><img class="loggo" src="assets\LBVA&VIVABv.3.png"></a>
-                    <a href="caseBalanceG.html" class="a"><img class="loggo" src="assets\BG-Logga.png"></a>
-
-        </div>
-            </div>
-
-        </div>
-
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
 
         
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface": "#1a1c1c",
+                        "secondary": "#5e5e5e",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#8dd795",
+                        "on-primary-fixed-variant": "#005320",
+                        "tertiary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-tint": "#236c35",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-surface-variant": "#40493f",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#b3b1b1",
+                        "on-primary-container": "#00501f",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "outline": "#707a6e",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed": "#a9f4af",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-container": "#444444",
+                        "primary-container": "#79c282",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#8dd795",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#646464",
+                        "surface-dim": "#dadada",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#236c35",
+                        "on-secondary-fixed-variant": "#474747",
+                        "outline-variant": "#c0c9bc",
+                        "on-primary-fixed": "#002109"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
 
-        <hr class="hrStyle" >
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+
+    
+
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)]">
+        <div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 space-grotesk">
+                SEBASTIAN PERSSON - PORTFOLIO
+            </div>
+
+            <!-- This needs fixing, the highlight green bow does not extend vertically the right ammount -->
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-12">
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 relative text-zinc-900 dark:text-zinc-50 before:absolute before:inset-0 before:-z-10 before:bg-[#79C282] "
+                    href="inedx.html">Home</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="cases.html">Work</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="aboutMe.html">About</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="aboutMe.html">Contact</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-90">
+                Let's Talk
+            </button>
+        </div>
+    </nav>
 
 
-    </div>
+    <main class="pt-32">
+        
+        <!-- Hero Section -->
+        <section class="max-w-[1440px] mx-auto px-8 mb-40">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+                <div class="md:col-span-8">
+                    <span
+                        class="label-md uppercase tracking-[0.3em] text-primary mb-6 block font-bold space-grotesk">Service
+                        &amp; UX Designer</span>
+                    <h1
+                        class="text-[clamp(3.5rem,10vw,7rem)] leading-[0.9] font-bold tracking-tighter space-grotesk mb-12">
+                        SEBASTIAN<br />PERSSON
+                    </h1>
+                    <p class="text-2xl text-on-surface-variant max-w-1xl font-light leading-relaxed">
+                        UX & Service Designer focused on translating complex user needs into measurable business value.
+                        With experience from projects in collaboration with Trafikverket and
+                        Region Halland.
+                        I am driven by creating inclusive digital services through data-driven analysis and prototyping.
+                    </p>
+                </div>
+                <div class="md:col-span-4 relative group">
+                    <div class="aspect-[4/5] bg-surface-container-highest overflow-hidden">
+                        <img alt="Sebastian Persson"
+                            data-alt="Close up portrait of Sebastian Persson, a Service & UX Designer"
+                            src="assets/PFP.jpg" />
+                    </div>
+                    <!-- Material Symbols Outlined icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined -->
+                    <div class="absolute -bottom-6 -left-6 bg-primary-container p-8 hidden md:block">
+                        <span
+                            class="material-symbols-outlined text-4xl text-on-primary-container">design_services</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+
+        <!-- Stats / Philosophy Bento -->
+        <section class="bg-surface-container-low py-32 mb-40">
+            <div class="max-w-[1440px] mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <div class="p-12 border-outline-variant/20 border-r-0 md:border-r">
+                        <h3 class="space-grotesk text-5xl font-bold mb-4">05+</h3>
+                        <p class="label-md uppercase tracking-widest text-on-surface-variant space-grotesk">Years of
+                            Academic Experience</p>
+                        <p class="mt-8 text-on-surface-variant leading-relaxed">Combining design thinking and service
+                            design principles to solve complex problems and structural challenges.</p>
+                    </div>
+                    <div class="p-12 border-outline-variant/20 border-r-0 md:border-r">
+                        <h3 class="space-grotesk text-5xl font-bold mb-4">100%</h3>
+                        <p class="label-md uppercase tracking-widest text-on-surface-variant space-grotesk">Focus on
+                            societal impact</p>
+                        <p class="mt-8 text-on-surface-variant leading-relaxed">Experience from designing processes and
+                            services for complex public sectors such as Trafikverket and Region Halland.</p>
+                    </div>
+                    <div class="p-12">
+                        <h3 class="space-grotesk text-5xl font-bold mb-4">A-B</h3>
+                        <p class="label-md uppercase tracking-widest text-on-surface-variant space-grotesk">From insight
+                            to impact</p>
+                        <p class="mt-8 text-on-surface-variant leading-relaxed">Bridging the gap between complex ideas
+                            and tangible solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Case Studies -->
+        <section class="max-w-[1440px] mx-auto px-8 mb-40">
+            <div class="flex justify-between items-end mb-20">
+                <div>
+                    <span
+                        class="label-md uppercase tracking-[0.3em] text-on-surface-variant mb-4 block space-grotesk">Selected
+                        Works</span>
+                    <h2 class="text-5xl font-bold tracking-tight space-grotesk">CASE STUDIES</h2>
+                </div>
+                <div class="hidden md:block" onclick="window.location='cases.html'">
+                    <a class="group flex items-center space-x-4 text-primary font-bold space-grotesk tracking-widest uppercase text-sm"
+                        href="#">
+                        <span>View Archive</span>
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="space-y-40">
+
+                <!-- Region Halland - Ambulansbemmaningen -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 group cursor-pointer" onclick="window.location='caseRegionH.html'">
+                    <div class="md:col-span-7 overflow-hidden bg-surface-container-highest">
+                        <img alt="Project Dashboard"
+                            class="w-full aspect-[16/10] object-contain transition-transform duration-1000 group-hover:scale-105"
+                            data-alt="Minimalist booking interface for ambulance staffing, clean lines, intuitive layout, high-contrast elements for accessibility"
+                            src="assets\Region_Halland\RH_prototyping1.png" />
+                    </div>
+                    <div class="md:col-span-5 flex flex-col justify-center">
+                        <span class="label-md uppercase tracking-widest text-on-surface-variant mb-6 space-grotesk">01 /
+                            PUBLIC SECTOR</span>
+                        <h3 class="text-4xl font-bold mb-6 space-grotesk tracking-tight">Region Halland -
+                            Ambulansbemmaningen</h3>
+                        <p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Optimizing critical care logistics
+                            through a high-density mobile interface that balances rigid medical compliance with
+                            frictionless, real-time schedule orchestration.
+                            <!-- The staffing unit for the ambulance services in Region Halland faced a
+                            highly sensitive logistical problem: they lacked an efficient, centralized system to book
+                            personnel, track specific individual competencies, and distribute shift hours fairly. They
+                            needed an optimized overview to quickly identify understaffed shifts and ensure every
+                            ambulance was legally and safely staffed with the correct medical and driving competencies. -->
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span
+                                class="px-4 py-1.5 bg-surface-container-high text-[10px] uppercase font-bold tracking-widest space-grotesk">Research</span>
+                            <span
+                                class="px-4 py-1.5 bg-surface-container-high text-[10px] uppercase font-bold tracking-widest space-grotesk">React
+                                Native Development</span>
+                            <span
+                                class="px-4 py-1.5 bg-surface-container-high text-[10px] uppercase font-bold tracking-widest space-grotesk">Prototyping</span>
+                        </div>
+                        <button
+                            class="w-fit border-b-2 border-primary pb-1 text-xs font-bold uppercase tracking-[0.2em] space-grotesk hover:text-primary transition-colors" >
+                            Explore Project
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- LBVA & VIVAB -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 group cursor-pointer flex-row-reverse" onclick="window.location='caseLBVA&VIVAB.html'">
+                    <div class="md:col-span-5 flex flex-col justify-center md:order-1">
+                        <span class="label-md uppercase tracking-widest text-on-surface-variant mb-6 space-grotesk">02 /
+                            Public Sector</span>
+                        <h3 class="text-4xl font-bold mb-6 space-grotesk tracking-tight">LBVA & VIVAB</h3>
+                        <p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Translating industrial data into
+                        corporate climate action through a dual-platform service infrastructure that transforms abstract
+                        water metrics into an intuitive, 3D-visualized B2B resource strategy.
+                            <!-- LBVA and VIVAB (municipally sponsored water management companies) needed to shift commercial
+                            and corporate attitudes toward freshwater consumption, encouraging organizations to stop
+                            treating it as an infinite resource. While plenty of environmental initiatives existed for
+                            private households, there was a critical lack of framework for small and medium-sized
+                            companies—the region’s largest water consumers. The client needed a comprehensive,
+                            service-centered solution leveraging newly installed digital water gauges to help businesses
+                            monitor, understand, and reduce their water footprint. -->
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span
+                                class="px-4 py-1.5 bg-surface-container-high text-[10px] uppercase font-bold tracking-widest space-grotesk">Service
+                                Design Lead</span>
+                            <span
+                                class="px-4 py-1.5 bg-surface-container-high text-[10px] uppercase font-bold tracking-widest space-grotesk">Service
+                                Blueprinting & Mapping</span>
+                            <span
+                                class="px-4 py-1.5 bg-surface-container-high text-[10px] uppercase font-bold tracking-widest space-grotesk">Cross-Functional
+                                UX Strategy</span>
+                        </div>
+                        <button
+                            class="w-fit border-b-2 border-primary pb-1 text-xs font-bold uppercase tracking-[0.2em] space-grotesk hover:text-primary transition-colors">
+                            Explore Project
+                        </button>
+                    </div>
+
+
+                    <div class="md:col-span-7 overflow-hidden bg-surface-container-highest md:order-2">
+                        <img alt="Luxury Product"
+                            class="w-full aspect-[16/10] object-contain transition-transform duration-1000 group-hover:scale-105"
+                            data-alt="Close-up of a premium minimalist watch on a stone surface, neutral tones, soft natural lighting, high-end commercial style"
+                            src="assets/LBVA&VIVAB/lbva&vivab cover.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What should i put here? -->
+        <!-- CTA Section -->
+        <section class="py-40 bg-zinc-900 text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 p-20 opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[20rem] cta-architecture-icon">design_services</span>
+            </div>
+            <div class="max-w-[1440px] mx-auto px-8 relative z-10">
+                <h2 class="text-6xl md:text-8xl font-bold mb-12 space-grotesk tracking-tighter max-w-4xl">
+                    READY TO BUILD<br />THE NEXT BIG THING?
+                </h2>
+                <div class="flex flex-col md:flex-row items-start md:items-center space-y-8 md:space-y-0 md:space-x-12">
+                    <button
+                        class="bg-primary-container text-on-primary-container px-12 py-6 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-sm font-bold transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(121,194,130,0.4)]">
+                        Start a Project
+                    </button>
+                    <a class="text-xl font-light underline underline-offset-8 decoration-primary-container/50 hover:decoration-primary-container transition-all"
+                        href="mailto:hello@sebastianpersson.com">
+                        hello@sebastianpersson.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Fix href here -->
+    <!-- Footer -->
+    <footer class="bg-zinc-50 dark:bg-zinc-900">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-20 max-w-[1440px] mx-auto">
+            <div class="font-['Space_Grotesk'] font-bold text-zinc-900 dark:text-zinc-50 mb-10 md:mb-0">
+                © 2026 BUILT WITH PRECISION.
+            </div>
+            <div class="flex space-x-8">
+                <a class="font-['Inter'] text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors opacity-80 hover:opacity-100"
+                    href="https://www.linkedin.com/in/sebastian-persson-708552253/?skipRedirect=true">LinkedIn</a>
+                <a class="font-['Inter'] text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors opacity-80 hover:opacity-100"
+                    href="mailto:sebbeph@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
 
 
 </body>

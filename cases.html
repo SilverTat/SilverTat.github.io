@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cases</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface": "#1a1c1c",
+                        "secondary": "#5e5e5e",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#8dd795",
+                        "on-primary-fixed-variant": "#005320",
+                        "tertiary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-tint": "#236c35",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-surface-variant": "#40493f",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#b3b1b1",
+                        "on-primary-container": "#00501f",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "outline": "#707a6e",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed": "#a9f4af",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-container": "#444444",
+                        "primary-container": "#79c282",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#8dd795",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#646464",
+                        "surface-dim": "#dadada",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#236c35",
+                        "on-secondary-fixed-variant": "#474747",
+                        "outline-variant": "#c0c9bc",
+                        "on-primary-fixed": "#002109"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-background text-on-background">
+
+    <!-- FIX: font -->
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)]">
+        <div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 space-grotesk">
+                SEBASTIAN PERSSON - PORTFOLIO
+            </div>
+
+            <!-- This needs fixing, the highlight green bow does not extend vertically the right ammount -->
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-12">
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="inedx.html">Home</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 relative text-zinc-900 dark:text-zinc-50 before:absolute before:inset-0 before:-z-10 before:bg-[#79C282]"
+                    href="cases.html">Work</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="aboutMe.html">About</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="aboutMe.html">Contact</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-90">
+                Let's Talk
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+
+        <!-- Hero Header -->
+        <header class="max-w-[1440px] mx-auto px-8 mb-24">
+            <div
+                class="inline-block bg-primary-container text-on-primary-container px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 font-headline">
+                Case studies
+            </div>
+            <h1 class="text-[clamp(3rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-tighter max-w-4xl">
+                DIGITAL <span class="text-primary-container">STRUCTURES</span> THAT HAVE IMPACT.
+            </h1>
+        </header>
+
+        <!-- Bento Grid Case Studies -->
+        <section class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-0 overflow-hidden">
+
+
+            <!-- Case Study 1: Region Halland - Ambulansbemmaningen -->
+            <div
+                class="md:col-span-8 group relative bg-surface-container-low border-r border-b border-outline-variant/10">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img class="w-full h-full object-contain transition-all duration-700 scale-100 group-hover:scale-105"
+                        data-alt="Minimalist dashboard interface on a laptop screen with clean mint accents and sleek data visualizations in a bright architectural studio"
+                        src="assets\Region_Halland\reworked shadows.png" />
+                </div>
+                <div class="p-10 flex flex-col justify-between h-full min-h-[300px]">
+                    <div>
+                        <p
+                            class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant mb-4 font-headline">
+                            HealthTech • 2021</p>
+                        <h2 class="text-4xl font-bold tracking-tighter mb-4">REGION HALLAND - AMBULANSBEMMANINGEN</h2>
+                        <p class="text-on-surface-variant max-w-md leading-relaxed">Optimizing critical care logistics
+                            through a high-density mobile interface that balances rigid medical compliance with
+                            frictionless, real-time schedule orchestration.</p>
+
+                        <div class="mt-8 flex items-center gap-4 group/link" onclick="window.location='caseRegionH.html'" style="cursor: pointer;">
+                            <span
+                                class="font-headline text-xs font-bold uppercase tracking-widest border-b-2 border-primary-container pb-1 transition-all group-hover/link:pr-4">View
+                                Case Study</span>
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Case Study 2: LBVA & VIVAB -->
+            <div class="md:col-span-4 group relative bg-surface-container-high border-b border-outline-variant/10">
+                <div class="aspect-[4/5] overflow-hidden">
+                    <img class="w-full h-full object-contain transition-all duration-700 scale-100 group-hover:scale-105"
+                        data-alt="Abstract architectural structure with sharp concrete angles and deep shadows under a clear sky representing minimalist design principles"
+                        src="assets/LBVA&VIVAB/Front view.png" />
+                </div>
+                <div class="p-8">
+                    <p
+                        class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant mb-4 font-headline">
+                        CleanTech • 2022</p>
+                    <h2 class="text-2xl font-bold tracking-tighter mb-4">LBVA & VIVAB</h2>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Translating industrial data into
+                        corporate climate action through a dual-platform service infrastructure that transforms abstract
+                        water metrics into an intuitive, 3D-visualized B2B resource strategy.</p>
+
+                    <div class="mt-8 flex items-center gap-4 group/link" onclick="window.location='caseLBVA&VIVAB.html'" style="cursor: pointer;">
+                        <span
+                            class="font-headline text-xs font-bold uppercase tracking-widest border-b-2 border-primary-container pb-1 transition-all group-hover/link:pr-4">View
+                            Case Study</span>
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Case Study 3: Trafikverket -->
+            <div class="md:col-span-4 group relative bg-surface-container-high border-b border-outline-variant/10" ">
+                <div class="aspect-[4/5] overflow-hidden">
+                    <img class="w-full h-full object-contain transition-all duration-700 scale-100 group-hover:scale-105"
+                        data-alt="Abstract architectural structure with sharp concrete angles and deep shadows under a clear sky representing minimalist design principles"
+                        src="assets/404.png" />
+                </div>
+                <div class="p-8">
+                    <p
+                        class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant mb-4 font-headline">
+                        MOBILITY • 2025</p>
+                    <h2 class="text-2xl font-bold tracking-tighter mb-4">Trafikverket</h2>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-6"><span style="font-weight: bold;">UNDER DEVELOPMENT</span></p>
+                    <div class="mt-8 flex items-center gap-4 group/link">
+                        <span
+                            class="font-headline text-xs font-bold uppercase tracking-widest border-b-2 border-primary-container pb-1 transition-all group-hover/link:pr-4">View
+                            Case Study</span>
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Case Study 4: Balance Golf -->
+            <div
+                class="md:col-span-8 group relative bg-surface-container-low border-r border-b border-outline-variant/10" >
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img class="w-full h-full object-contain transition-all duration-700 scale-100 group-hover:scale-105"
+                        data-alt="Minimalist dashboard interface on a laptop screen with clean mint accents and sleek data visualizations in a bright architectural studio"
+                        src="assets/BG/Prototype1.png" />
+                </div>
+                <div class="p-10 flex flex-col justify-between h-full min-h-[300px]">
+                    <div>
+                        <p
+                            class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant mb-4 font-headline">
+                            SPORTSTECH • 2021</p>
+                        <h2 class="text-4xl font-bold tracking-tighter mb-4">BALANCE GOLF</h2>
+                        <p class="text-on-surface-variant max-w-md leading-relaxed">Re-architecting digital golf coaching by dismantling fragmented informational hierarchies into a demographically adaptive navigation ecosystem that bridges transactional speed with emotional user onboarding.</p>
+                        <div class="mt-8 flex items-center gap-4 group/link" onclick="window.location='caseBalanceG.html'" style="cursor: pointer;">
+                            <span
+                                class="font-headline text-xs font-bold uppercase tracking-widest border-b-2 border-primary-container pb-1 transition-all group-hover/link:pr-4">View
+                                Case Study</span>
+                            <span class="material-symbols-outlined text-primary" 
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CTA Section -->
+        <section class="py-40 bg-zinc-900 text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 p-20 opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[20rem] cta-architecture-icon">design_services</span>
+            </div>
+            <div class="max-w-[1440px] mx-auto px-8 relative z-10">
+                <h2 class="text-6xl md:text-8xl font-bold mb-12 space-grotesk tracking-tighter max-w-4xl">
+                    READY TO BUILD<br />THE NEXT BIG THING?
+                </h2>
+                <div class="flex flex-col md:flex-row items-start md:items-center space-y-8 md:space-y-0 md:space-x-12">
+                    <button
+                        class="bg-primary-container text-on-primary-container px-12 py-6 font-['Space_Grotesk'] uppercase tracking-[0.2em] text-sm font-bold transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(121,194,130,0.4)]">
+                        Start a Project
+                    </button>
+                    <a class="text-xl font-light underline underline-offset-8 decoration-primary-container/50 hover:decoration-primary-container transition-all"
+                        href="mailto:hello@sebastianpersson.com">
+                        hello@sebastianpersson.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-zinc-50 dark:bg-zinc-900">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-20 max-w-[1440px] mx-auto">
+            <div class="font-['Space_Grotesk'] font-bold text-zinc-900 dark:text-zinc-50 mb-10 md:mb-0">
+                © 2026 BUILT WITH PRECISION.
+            </div>
+            <div class="flex space-x-8">
+                <a class="font-['Inter'] text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors opacity-80 hover:opacity-100"
+                    href="https://www.linkedin.com/in/sebastian-persson-708552253/?skipRedirect=true">LinkedIn</a>
+                <a class="font-['Inter'] text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 hover:text-emerald-500 transition-colors opacity-80 hover:opacity-100"
+                    href="mailto:sebbeph@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -2,6 +2,8 @@
 <html id="topScroll">
 
 <head>
+
+    <!-- legacy -->
     <link rel="stylesheet" href="style.css">
     <title>Case Study - LBVA & VIVAB</title>
 
@@ -12,18 +14,138 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
     </style>
+
+    <!-- needed for new design with tailwind -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cases</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface": "#1a1c1c",
+                        "secondary": "#5e5e5e",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#8dd795",
+                        "on-primary-fixed-variant": "#005320",
+                        "tertiary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-tint": "#236c35",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-surface-variant": "#40493f",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#b3b1b1",
+                        "on-primary-container": "#00501f",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "outline": "#707a6e",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed": "#a9f4af",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-container": "#444444",
+                        "primary-container": "#79c282",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#8dd795",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#646464",
+                        "surface-dim": "#dadada",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#236c35",
+                        "on-secondary-fixed-variant": "#474747",
+                        "outline-variant": "#c0c9bc",
+                        "on-primary-fixed": "#002109"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
 
 
-    <!-- Menu navigation -->
-    <div class="header">
-        <a class="menu" href="index.html">Home</a>
-        <a class="menuStatic" href="myProjects.html">Case studys</a>
-        <a id="cv" class="menu" href="assets\Sebastian Persson - CV.pdf">CV</a>
-        <a class="menu" href="aboutMe.html">About me</a>
-    </div>
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)]">
+        <div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 space-grotesk">
+                SEBASTIAN PERSSON - PORTFOLIO
+            </div>
+
+            <!-- This needs fixing, the highlight green bow does not extend vertically the right ammount -->
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-12">
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="inedx.html">Home</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 relative text-zinc-900 dark:text-zinc-50 before:absolute before:inset-0 before:-z-10 before:bg-[#79C282]"
+                    href="cases.html">Work</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="aboutMe.html">About</a>
+                <a class="font-['Space_Grotesk'] uppercase tracking-wider text-sm transition-all duration-300 ease-in-out hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    href="aboutMe.html">Contact</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-90">
+                Let's Talk
+            </button>
+        </div>
+    </nav>
 
     <hr class="hrStyle">
 
@@ -31,7 +153,7 @@
     <div class="bodyContain">
 
         <div class="aboutMeTest" style="margin-bottom: 5%;">
-            <div class="aboutMeContent" >
+            <div class="aboutMeContent">
 
                 <div class="content" id="content1">
                     <h1 style="margin-top: 42.1%; font-size: 3em; margin-bottom: 0%;">CASE STUDY</h1>
@@ -62,7 +184,8 @@
             <div style="width: 35%;">
                 <div class="slideshowImgCase slideshow1">
                     <button class="prevCase" onclick="prevSlide('slideshow1')">&#10094;</button>
-                    <img class="slideshowTestCase active" src="assets\BG\BG cover.png" id="slide1" style="min-width: 120%;">
+                    <img class="slideshowTestCase active" src="assets\BG\BG cover.png" id="slide1"
+                        style="min-width: 120%;">
 
                     <button class="nextCase" onclick="nextSlide('slideshow1')">&#10095;</button>
                     <button class="enlargeCase" onclick="enlargeImage('slideshow1')">&#10064;</button>
@@ -156,13 +279,14 @@
                     &#x2022; A <span id="highlightTxt">sitemap</span> for increased ease of navigation and improved
                     informational architecture
                 </p>
-                
+
                 <p>
                     &#x2022; An <span id="highlightTxt">ER-model</span>
                 </p>
-                
+
                 <p>
-                    &#x2022; Guidelines for <span id="highlightTxt">further development</span>, included in the project report
+                    &#x2022; Guidelines for <span id="highlightTxt">further development</span>, included in the project
+                    report
                 </p>
 
             </div>
@@ -171,7 +295,8 @@
                 <!-- New Slideshow -->
                 <div class="slideshowImgCase slideshow1BG">
                     <button class="prevCase" onclick="prevSlide('slideshow1BG')">&#10094;</button>
-                    <img class="slideshowTestCase active" src="assets\BG\Prototype1.png" id="slide1" style="min-width: 120%;">
+                    <img class="slideshowTestCase active" src="assets\BG\Prototype1.png" id="slide1"
+                        style="min-width: 120%;">
                     <img class="slideshowTestCase" src="assets\BG\Prototype2.png" style="min-width: 120%;">
                     <img class="slideshowTestCase" src="assets\BG\Prototype3.png" style="min-width: 120%;">
                     <img class="slideshowTestCase" src="assets\BG\Sitemap.png" style="min-width: 120%; padding: 2%;">
@@ -537,8 +662,8 @@
                     <br><br>&#x2022; A <span id="highlightTxt">mixed fidelity prototype</span>
                     in Figma
                     <br><br>&#x2022; An <span id="highlightTxt">ER-model</span>
-                    <br><br>&#x2022; A <span id="highlightTxt" >coded prototype</span> 
-                    <br><br>&#x2022; And <span id="highlightTxt" >information about further development</span>
+                    <br><br>&#x2022; A <span id="highlightTxt">coded prototype</span>
+                    <br><br>&#x2022; And <span id="highlightTxt">information about further development</span>
                 </p>
 
             </div>
